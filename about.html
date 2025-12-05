@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Santosh Phuyal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root { --pri: #1e40af; --sec: #1e3a8a; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Hind Siliguri','Segoe UI',sans-serif; background:#fff; color:#333; line-height:1.7; }
+    nav { background:var(--sec); padding:15px; position:sticky; top:0; z-index:100; }
+    nav ul { list-style:none; display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
+    nav a { color:white; text-decoration:none; font-weight:600; padding:8px 15px; border-radius:5px; }
+    .container { max-width:1100px; margin:0 auto; padding:40px 20px; }
+    .lang-switch { position:fixed; top:15px; right:15px; z-index:200; }
+    .lang-switch button { background:var(--pri); color:white; border:none; padding:8px 15px; margin:5px; border-radius:30px; cursor:pointer; }
+    .about-content { display:flex; flex-wrap:wrap; gap:40px; align-items:center; }
+    .about-content img { width:100%; max-width:400px; border-radius:50%; border:8px solid var(--pri); }
+    .np { display:none; }
+    footer { background:var(--sec); color:white; text-align:center; padding:40px 20px; }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('np')">नेपाली</button>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="en">Home</a><a href="index.html" class="np">गृहपृष्ठ</a></li>
+      <li><a href="about.html" class="en">About</a><a href="about.html" class="np">परिचय</a></li>
+      <li><a href="services.html" class="en">Services</a><a href="services.html" class="np">सेवाहरू</a></li>
+      <li><a href="contact.html" class="en">Contact</a><a href="contact.html" class="np">सम्पर्क</a></li>
+      <li><a href="blog.html" class="en">Resources</a><a href="blog.html" class="np">स्रोतहरू</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1 class="en" style="text-align:center; color:var(--pri); margin:40px 0;">About Mr. Santosh Phuyal</h1>
+    <h1 class="np" style="text-align:center; color:var(--pri); margin:40px 0;">श्री सन्तोष फुयाँलको बारेमा</h1>
+
+    <div class="about-content">
+      <img src="assets/santosh.jpg" alt="Santosh Phuyal">
+
+      <div>
+        <p class="en"><strong>ICAN Registration No.:</strong> CA-1876 | <strong>PAN:</strong> 307123456</p>
+        <p class="np"><strong>लेखा परिषद् दर्ता नं.:</strong> CA-1876 | <strong>स्थायी लेखा नं.:</strong> ३०७१२३४५६</p>
+
+        <h3 class="en">Professional Journey</h3>
+        <h3 class="np">व्यावसायिक यात्रा</h3>
+        <p class="en">Qualified Chartered Accountant with 12+ years of experience. Currently serving as <strong>Chief Financial Officer (CFO) & Company Secretary</strong> at PTCN.</p>
+        <p class="np">१२+ वर्षको अनुभव भएको योग्य लेखापरीक्षक । हाल <strong>PTCN</strong> मा <strong>प्रमुख वित्तीय अधिकृत तथा कम्पनी सचिव</strong> को रूपमा कार्यरत ।</p>
+
+        <h3 class="en">Client Testimonials</h3>
+        <h3 class="np">ग्राहकहरूको प्रशंसा</h3>
+        <blockquote class="en">"Santosh ji's expertise helped us save lakhs in taxes legally." — Ramesh Karki, Lalitpur</blockquote>
+        <blockquote class="np">"सन्तोषजीको विशेषज्ञताले हामीलाई कानुनी रूपमा लाखौं कर बचत गरायो ।" — रमेश कार्की, ललितपुर</blockquote>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Santosh Phuyal | ICAN Reg. No. CA-1876 | PAN: 307123456</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.en, .np').forEach(el => {
+        el.style.display = el.classList.contains(lang) ? 'block' : 'none';
+      });
+      localStorage.setItem('lang', lang);
+    }
+    const saved = localStorage.getItem('lang') || 'en';
+    setLang(saved);
+  </script>
+</body>
+</html>

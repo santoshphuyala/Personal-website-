@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | Santosh Phuyal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root { --pri: #1e40af; --sec: #1e3a8a; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Hind Siliguri','Segoe UI',sans-serif; background:#fff; color:#333; line-height:1.7; }
+    nav { background:var(--sec); padding:15px; position:sticky; top:0; z-index:100; }
+    nav ul { list-style:none; display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
+    nav a { color:white; text-decoration:none; font-weight:600; padding:8px 15px; border-radius:5px; }
+    .container { max-width:1100px; margin:0 auto; padding:40px 20px; }
+    .lang-switch { position:fixed; top:15px; right:15px; z-index:200; }
+    .lang-switch button { background:var(--pri); color:white; border:none; padding:8px 15px; margin:5px; border-radius:30px; cursor:pointer; }
+    .blog-post { background:white; padding:30px; margin:30px 0; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.1); }
+    .np { display:none; }
+    footer { background:var(--sec); color:white; text-align:center; padding:40px 20px; }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('np')">नेपाली</button>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="en">Home</a><a href="index.html" class="np">गृहपृष्ठ</a></li>
+      <li><a href="about.html" class="en">About</a><a href="about.html" class="np">परिचय</a></li>
+      <li><a href="services.html" class="en">Services</a><a href="services.html" class="np">सेवाहरू</a></li>
+      <li><a href="contact.html" class="en">Contact</a><a href="contact.html" class="np">सम्पर्क</a></li>
+      <li><a href="blog.html" class="en">Resources</a><a href="blog.html" class="np">स्रोतहरू</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1 class="en" style="text-align:center; color:var(--pri); margin:40px 0;">Tax Tips & Resources</h1>
+    <h1 class="np" style="text-align:center; color:var(--pri); margin:40px 0;">कर सुझाव तथा स्रोतहरू</h1>
+
+    <div class="blog-post">
+      <h3 class="en">New Tax Slabs for FY 2081/82 (2024-25)</h3>
+      <h3 class="np">आर्थिक वर्ष २०८१/८२ को नयाँ कर स्ल्याब</h3>
+      <p class="en">Updated income tax rates for individuals and couples...</p>
+      <p class="np">व्यक्तिगत र दम्पतिको लागि नयाँ आयकर दरहरू...</p>
+      <small class="en">Published: Ashoj 2081</small>
+      <small class="np">प्रकाशित: आश्विन २०८१</small>
+    </div>
+
+    <div class="blog-post">
+      <h3 class="en">How to Reduce Tax Legally in Nepal</h3>
+      <h3 class="np">नेपालमा कानुनी रूपमा कर कसरी घटाउने ?</h3>
+      <p class="en">Top 10 legal ways to save tax...</p>
+      <p class="np">कर बचत गर्ने शीर्ष १० कानुनी तरिकाहरू...</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Santosh Phuyal | ICAN Reg. No. CA-1876 | PAN: 307123456</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.en, .np').forEach(el => {
+        el.style.display = el.classList.contains(lang) ? 'block' : 'none';
+      });
+      localStorage.setItem('lang', lang);
+    }
+    const saved = localStorage.getItem('lang') || 'en';
+    setLang(saved);
+  </script>
+</body>
+</html>

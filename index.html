@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santosh Phuyal | Chartered Accountant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root { --pri: #1e40af; --sec: #1e3a8a; --light: #f8fafc; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Hind Siliguri','Segoe UI',sans-serif; background:#fff; color:#333; line-height:1.7; }
+    header { background:linear-gradient(135deg,var(--pri),var(--sec)); color:white; padding:80px 20px; text-align:center; }
+    nav { background:var(--sec); padding:15px; position:sticky; top:0; z-index:100; }
+    nav ul { list-style:none; display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
+    nav a { color:white; text-decoration:none; font-weight:600; padding:8px 15px; border-radius:5px; }
+    nav a:hover { background:rgba(255,255,255,0.2); }
+    .container { max-width:1100px; margin:0 auto; padding:20px; }
+    .hero h1 { font-size:3rem; margin:20px 0; }
+    .lang-switch { position:fixed; top:15px; right:15px; z-index:200; }
+    .lang-switch button { background:var(--pri); color:white; border:none; padding:8px 15px; margin:5px; border-radius:30px; cursor:pointer; }
+    .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px; margin:50px 0; }
+    .card { background:white; padding:30px; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.1); text-align:center; transition:0.3s; }
+    .card:hover { transform:translateY(-10px); }
+    .card i { font-size:3rem; color:var(--pri); margin-bottom:20px; }
+    .btn { background:var(--pri); color:white; padding:14px 30px; border-radius:50px; text-decoration:none; display:inline-block; margin:10px; font-weight:bold; }
+    footer { background:var(--sec); color:white; text-align:center; padding:40px 20px; }
+    .np { display:none; }
+    @media (max-width:768px) { .hero h1 { font-size:2.2rem; } }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('np')">नेपाली</button>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="en">Home</a><a href="index.html" class="np">गृहपृष्ठ</a></li>
+      <li><a href="about.html" class="en">About</a><a href="about.html" class="np">परिचय</a></li>
+      <li><a href="services.html" class="en">Services</a><a href="services.html" class="np">सेवाहरू</a></li>
+      <li><a href="contact.html" class="en">Contact</a><a href="contact.html" class="np">सम्पर्क</a></li>
+      <li><a href="blog.html" class="en">Resources</a><a href="blog.html" class="np">स्रोतहरू</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1 class="en">Mr. Santosh Phuyal</h1>
+      <h1 class="np">श्री सन्तोष फुयाँल</h1>
+      <p class="en">Chartered Accountant | CFO & Company Secretary at PTCN</p>
+      <p class="np">लेखापरीक्षक | PTCN मा प्रमुख वित्तीय अधिकृत तथा कम्पनी सचिव</p>
+      <p class="en" style="font-size:1.5rem; margin:25px 0;">Expert in Tax Planning • Startup Advisory • Financial Projections • Loan Proposals</p>
+      <p class="np" style="font-size:1.5rem; margin:25px 0;">कर योजना • स्टार्टअप परामर्श • वित्तीय प्रक्षेपण • कर्जा प्रस्ताव विशेषज्ञ</p>
+      <a href="contact.html" class="btn en">Get Consultation</a>
+      <a href="contact.html" class="btn np">परामर्श लिनुहोस्</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2 class="en">Core Services</h2>
+    <h2 class="np">मुख्य सेवाहरू</h2>
+    <div class="services-grid">
+      <div class="card">
+        <i class="fas fa-calculator"></i>
+        <h3 class="en">Tax Consultancy</h3>
+        <h3 class="np">कर परामर्श</h3>
+        <p class="en">Income Tax, VAT, TDS, Corporate Tax Planning</p>
+        <p class="np">आयकर, भ्याट, TDS, कर्पोरेट कर योजना</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-rocket"></i>
+        <h3 class="en">Startup Consultancy</h3>
+        <h3 class="np">स्टार्टअप परामर्श</h3>
+        <p class="en">Company Registration, Funding Strategy</p>
+        <p class="np">कम्पनी दर्ता, लगानी रणनीति</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3 class="en">Financial Projections</h3>
+        <h3 class="np">वित्तीय प्रक्षेपण</h3>
+        <p class="en">5-Year Forecast, Cash Flow, P&L Modeling</p>
+        <p class="np">५ वर्षको प्रक्षेपण, नगद प्रवाह, नाफा-नोक्सान</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-file-invoice-dollar"></i>
+        <h3 class="en">Loan & Business Proposals</h3>
+        <h3 class="np">कर्जा तथा व्यवसाय प्रस्ताव</h3>
+        <p class="en">Bank-ready Project Report, CMA Data</p>
+        <p class="np">बैंकको लागि तयार परियोजना प्रतिवेदन, CMA डाटा</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Santosh Phuyal | ICAN Reg. No. CA-1876 | PAN: 307123456</p>
+    <p class="en">Currently CFO & Company Secretary at PTCN</p>
+    <p class="np">हाल PTCN मा प्रमुख वित्तीय अधिकृत तथा कम्पनी सचिव</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.en, .np').forEach(el => {
+        el.style.display = el.classList.contains(lang) ? 'block' : 'none';
+      });
+      localStorage.setItem('lang', lang);
+    }
+    const saved = localStorage.getItem('lang') || 'en';
+    setLang(saved);
+  </script>
+</body>
+</html>

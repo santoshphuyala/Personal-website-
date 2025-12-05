@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Santosh Phuyal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root { --pri: #1e40af; --sec: #1e3a8a; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Hind Siliguri','Segoe UI',sans-serif; background:#fff; color:#333; line-height:1.7; }
+    nav { background:var(--sec); padding:15px; position:sticky; top:0; z-index:100; }
+    nav ul { list-style:none; display:flex; justify-content:center; flex-wrap:wrap; gap:20px; }
+    nav a { color:white; text-decoration:none; font-weight:600; padding:8px 15px; border-radius:5px; }
+    .container { max-width:1100px; margin:0 auto; padding:40px 20px; }
+    .lang-switch { position:fixed; top:15px; right:15px; z-index:200; }
+    .lang-switch button { background:var(--pri); color:white; border:none; padding:8px 15px; margin:5px; border-radius:30px; cursor:pointer; }
+    .service { background:white; margin:30px 0; padding:30px; border-radius:15px; box-shadow:0 8px 25px rgba(0,0,0,0.1); }
+    .service h3 { color:var(--pri); margin-bottom:15px; }
+    .price { font-size:1.3rem; color:var(--sec); font-weight:bold; margin:15px 0; }
+    .np { display:none; }
+    footer { background:var(--sec); color:white; text-align:center; padding:40px 20px; }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('np')">नेपाली</button>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html" class="en">Home</a><a href="index.html" class="np">गृहपृष्ठ</a></li>
+      <li><a href="about.html" class="en">About</a><a href="about.html" class="np">परिचय</a></li>
+      <li><a href="services.html" class="en">Services</a><a href="services.html" class="np">सेवाहरू</a></li>
+      <li><a href="contact.html" class="en">Contact</a><a href="contact.html" class="np">सम्पर्क</a></li>
+      <li><a href="blog.html" class="en">Resources</a><a href="blog.html" class="np">स्रोतहरू</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1 class="en" style="text-align:center; color:var(--pri); margin:30px 0;">Our Services</h1>
+    <h1 class="np" style="text-align:center; color:var(--pri); margin:30px 0;">हाम्रा सेवाहरू</h1>
+
+    <div class="service">
+      <h3 class="en">Tax Consultancy & Compliance</h3>
+      <h3 class="np">कर परामर्श तथा अनुपालन</h3>
+      <p class="en">Income Tax Return, VAT, TDS, Corporate Tax Planning & Filing</p>
+      <p class="np">आयकर विवरणी, भ्याट, TDS, कर्पोरेट कर योजना र दाखिला</p>
+      <div class="price en">Starting from NPR 15,000</div>
+      <div class="price np">शुरु NPR १५,००० बाट</div>
+    </div>
+
+    <div class="service">
+      <h3 class="en">Startup & Company Registration</h3>
+      <h3 class="np">स्टार्टअप तथा कम्पनी दर्ता</h3>
+      <p class="en">Private Limited, Partnership, PAN/TAN, Trademark Registration</p>
+      <p class="np">प्राइभेट लिमिटेड, साझेदारी, PAN/TAN, ट्रेडमार्क दर्ता</p>
+      <div class="price en">NPR 25,000 – 75,000</div>
+      <div class="price np">NPR २५,००० – ७५,०००</div>
+    </div>
+
+    <div class="service">
+      <h3 class="en">Financial Projections & Modeling</h3>
+      <h3 class="np">वित्तीय प्रक्षेपण तथा मोडलिङ</h3>
+      <p class="en">5-Year Forecast, Cash Flow, Profit & Loss, Balance Sheet</p>
+      <p class="np">५ वर्षको प्रक्षेपण, नगद प्रवाह, नाफा-नोक्सान, वासलात</p>
+      <div class="price en">NPR 30,000 onwards</div>
+      <div class="price np">NPR ३०,००० बाट शुरू</div>
+    </div>
+
+    <div class="service">
+      <h3 class="en">Bank Loan & Project Report (CMA Data)</h3>
+      <h3 class="np">बैंक कर्जा तथा परियोजना प्रतिवेदन (CMA डाटा)</h3>
+      <p class="en">Complete bank-ready report, Valuation, Working Capital Assessment</p>
+      <p class="np">बैंकको लागि पूर्ण तयार प्रतिवेदन, मूल्यांकन, कार्यशील पूँजी</p>
+      <div class="price en">NPR 40,000 – 1,50,000</div>
+      <div class="price np">NPR ४०,००० – १,५०,०००</div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Santosh Phuyal | ICAN Reg. No. CA-1876 | PAN: 307123456</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.en, .np').forEach(el => {
+        el.style.display = el.classList.contains(lang) ? 'block' : 'none';
+      });
+      localStorage.setItem('lang', lang);
+    }
+    const saved = localStorage.getItem('lang') || 'en';
+    setLang(saved);
+  </script>
+</body>
+</html>
